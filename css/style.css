@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+:root {
+  /* Primary */
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  /* Neutral */
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  /* paragraphs */
+  --very-light-gray: hsl(0, 0%, 95%);
+  /* bg, headings, buttons */
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--very-light-gray);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  font-size: 15px;
+}
+
+.preview-cards {
+  width: 90%;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  margin: 16px auto;
+}
+
+.card-title {
+  font-family: "Big Shoulders Display";
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--very-light-gray);
+  margin: 28px 0;
+}
+
+.card-description {
+  font-family: "Lexend Deca";
+  color: var(--very-light-gray);
+  margin: 28px 0;
+}
+
+.btn-sedans-car {
+  border: 2px solid var(--very-light-gray);
+  border-radius: 50px;
+  padding: 8px 28px;
+  background-color: var(--very-light-gray);
+  color: var(--bright-orange);
+}
+
+.btn-sedans-car:hover {
+  cursor: pointer;
+  color: var(--very-light-gray);
+  background-color: var(--bright-orange);
+}
+
+.btn-suvs-car {
+  border: 2px solid var(--very-light-gray);
+  border-radius: 50px;
+  padding: 8px 28px;
+  background-color: var(--very-light-gray);
+  color: var(--dark-cyan);
+}
+
+.btn-suvs-car:hover {
+  cursor: pointer;
+  color: var(--very-light-gray);
+  background-color: var(--dark-cyan);
+}
+
+.btn-luxury-car {
+  border: 2px solid var(--very-light-gray);
+  border-radius: 50px;
+  padding: 8px 28px;
+  background-color: var(--very-light-gray);
+  color: var(--very-dark-cyan);
+}
+
+.btn-luxury-car:hover {
+  cursor: pointer;
+  color: var(--very-light-gray);
+  background-color: var(--very-dark-cyan);
+}
+
+.card-1 {
+  background-color: var(--bright-orange);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 28px;
+}
+
+.card-2 {
+  background-color: var(--dark-cyan);
+  padding: 28px;
+}
+
+.card-3 {
+  background-color: var(--very-dark-cyan);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding: 28px;
+}
+
+/* Responsive Design */
+@media screen and (min-width: 768px) {
+  .preview-cards {
+    justify-content: center;
+    flex-direction: row;
+    width: 700px;
+  }
+
+  .card-description {
+    height: 140px;
+  }
+
+  .card-1 {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 8px;
+  }
+
+  .card-3 {
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 0;
+  }
+}
